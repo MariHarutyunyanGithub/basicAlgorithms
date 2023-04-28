@@ -23,8 +23,8 @@ void merge(std::vector<int>& vec, int left, int mid, int right)
     while (start2 <= end2) {
         tmp[index++] = vec[start2++];
     }
-    for (int i{left}, k = 0; i <= right; ++i) {
-        vec[i] = tmp[k++];
+    for (int i{left}, k{}; i <= right;) {
+        vec[i++] = tmp[k++];
     }
 }
 
