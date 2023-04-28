@@ -48,8 +48,5 @@ int main() {
     for (const auto& elem : vec) {
         std::cout << elem << " ";
     }
-    // for (int i{}; i < vec.size(); ++i) {
-    //     std::cout << vec[i] << " ";
-    // }
     std::cout << std::endl;
 }
