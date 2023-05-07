@@ -4,16 +4,21 @@
 void bubbleSort(std::vector<int>& vec)
 {
     for (int i{}; i < vec.size(); ++i) {
-        for (int j{1}; j < vec.size() - i - 1; ++j) {
+        bool sorted = true;
+        for (int j{}; j < vec.size() - i - 1; ++j) {
             if (vec[j] > vec[j + 1]) {
+                sorted = false;
                 std::swap(vec[j], vec[j + 1]);
             }
+        }
+        if (sorted) {
+            return;
         }
     }
 }
 
 int main() {
-    std::vector<int> vec{1, 2, 5, 4, 8, 7, 3};
+    std::vector<int> vec{0, 1, 2, 5, 4, 6, 7, 9, 7, 9};
     for (const auto& elem : vec) {
         std::cout << elem << " ";
     }
